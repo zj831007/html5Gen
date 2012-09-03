@@ -1,0 +1,3 @@
+RewriteEngine on      
+RewriteCond $1 !^(index\.php|js|css|ckeditor|kcfinder|robots\.txt)
+RewriteRule ^(.*)$ /html5Gen/index.php/$1 [L]
