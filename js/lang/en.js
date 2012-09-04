@@ -55,7 +55,7 @@ Chidopi.lang = {
         llk_info4  : 'You can only delete it when you select 2 points of the line!',
         llk_info5  : 'Add text',
         llk_info6  : 'Please select text!',
-        vcb_info1  : 'Setting isn''t complete',
+        vcb_info1  : "Setting isn't complete",
         scene_start : 'Home Scene', 
         scene_level : 'Test Scene', 
         scene_succ  : 'Success Scene', 

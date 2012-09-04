@@ -33,7 +33,7 @@ $(function(){
 				component.removeClass("chidopoi_<{$id}>_load");
 				hide_<{$id}>_action();
 			    $("#container").unbind("click",hide_<{$id}>);
-			    toggle_<{$i_button}>();
+			    if(toggle_<{$i_button}>) toggle_<{$i_button}>();
 			}
 		}
 	}
@@ -71,7 +71,7 @@ JS.onReady(function(){
 <{/if}>   
 </script>
 <div id="<{$id}>" class="chidopi_component3D" style="position: absolute; left:<{$i_left}>px; top:<{$i_top}>px; z-index:<{$zIndex}>; display:<{$i_display}>; <{if $loadAction}>visibility:hidden;<{/if}>" >
-    <img id="pic_<{$id}>" src="<{$res_dir}><{$i_file}>" 
+    <img id="pic_<{$id}>" src="<{$res_dir}><{$i_file}>" <{if $tap}>class="click_ignore_me"<{/if}>
         style="width:<{$i_width}>px; height:<{$i_height}>px;" />
 </div>
 

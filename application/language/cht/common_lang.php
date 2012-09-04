@@ -85,6 +85,7 @@ $lang['label.common.normal'] = "普通";
 $lang['label.common.small'] = "較小";
 $lang['label.common.large'] = "較大";
 $lang['label.common.align'] = "對齊方式";
+$lang['label.common.callTap'] = "不呼叫工具列";
 $lang['label.align.left'] = "左";
 $lang['label.align.center'] = "中";
 $lang['label.align.right'] = "右";

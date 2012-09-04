@@ -24,6 +24,7 @@ $(function(){
                     <option value=""><?php echo lang('label.common.status.display'); ?></option>
                     <option value="none"><?php echo lang('label.common.status.hidden'); ?></option>
                 </select>
+                &nbsp;<?php echo lang('label.common.callTap');?><input type="checkbox" name="iTap" value="1" id="iTap"/>
             </td>
         </tr>
         <tbody id="div_img_display">

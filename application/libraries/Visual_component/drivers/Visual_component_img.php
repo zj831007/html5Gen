@@ -66,6 +66,7 @@ class Visual_component_img extends CI_Driver {
 			'offset_w'  => 0,
 			'offset_h'  => 0,
 			'zIndex'  => $value['zIndex'],
+			'tap'     => $value['iTap'],
 			
 			$this->KEY_LOAD_ACTION => $value[$this->KEY_LOAD_ACTION],
 			$this->KEY_LOAD_POS => $value[$this->KEY_LOAD_POS],
