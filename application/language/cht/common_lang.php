@@ -173,7 +173,21 @@ $lang['label.button.del'] = "刪除";
 $lang['label.button.add'] = "添加";
 $lang['label.button.up'] = "上移";
 $lang['label.button.down'] = "下移";
-
+$lang['label.game.mode'] = "遊戲模式";
+$lang['label.game.mode.challenge'] = "挑戰模式";
+$lang['label.game.mode.practice'] = "練習模式";
+$lang['label.game.level.free'] = "自由選關";
+$lang['label.game.level.sort'] = "順序選關";
+$lang['label.game.menu.mode'] = "模式菜單";
+$lang['label.game.menu.level'] = "選關菜單";
+$lang['label.game.menu.bg'] = "菜單背景";
+$lang['label.game.back.area'] = "觸控返回區域";
+$lang['label.game.button.challenge'] = "挑戰模式按鈕";
+$lang['label.game.button.practice'] = "練習模式按鈕";
+$lang['label.game.button.level'] = "關卡按鈕";
+$lang['label.game.button.pic1'] = "默認圖片";
+$lang['label.game.button.pic2'] = "過關圖片";
+$lang['label.game.button.enter'] = "點擊進入";
 
 //页面载入载出动画
 $lang['label.animation.load'] = "頁面載入動畫";

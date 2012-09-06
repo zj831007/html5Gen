@@ -1322,6 +1322,13 @@ define(function(require, exports, module) {
          var id = newValue;
          var the_scene;
          var type = "";
+         
+        // clear Canvas
+  		_canvas.clear();
+  		_canvas.setBackgroundImage("");
+  		_canvas.setOverlayImage("");
+  		_canvas.renderAll();
+  		
  		 if(id){
  			$.each(_model.scenes(),function(n, value){
  				if(id == value.id()){ 
@@ -1354,15 +1361,20 @@ define(function(require, exports, module) {
  			//$("#vo_scenceCanvas").show();
  		}else{
  			//$("#vo_scenceCanvas").hide();
+ 			//draw a indicator png
+ 			var src = _vars.base_url + "css/images/indicator.png";
+ 			var centerCoord = _canvas.getCenter();
+ 			//_canvas.backgroundImageStretch = false;
+ 			//_canvas.setBackgroundImage(src, _canvas.renderAll.bind(_canvas),{ left:centerCoord.left, top:centerCoord.top});
+ 			fabric.Image.fromURL(src, function (img) {
+ 		       var oImg = img.set({ left:centerCoord.left, top:centerCoord.top});
+ 		       console.log(centerCoord.left + "," + centerCoord.top);
+ 		       _canvas.add(oImg);
+
+ 		    });
  		}
  		 
  		_model.checkScene(type);
- 		
- 		// clear Canvas
- 		_canvas.clear();
- 		_canvas.setBackgroundImage("");
- 		_canvas.setOverlayImage("");
- 		_canvas.renderAll();
  		
  		// use current Scene draw canvas
  		the_scene && the_scene.draw && the_scene.draw(_canvas, _model);
@@ -1816,6 +1828,7 @@ define(function(require, exports, module) {
 	};
 	
 	var _init_model = function(json){
+		console.log("_init_model");
 		if(json){
 		    _model.number(json.number);
 			_model.id(json.id);
@@ -1920,10 +1933,6 @@ define(function(require, exports, module) {
 					_model.scenes().push(scene);
 					_model.levelScenes().push(scene);
 				}
-				_model.checkScene('');
-				_model.checkScene.valueHasMutated();
-				_model.currentScene('');
-				_model.currentScene.valueHasMutated();
 			}
 			
 			_model.levelScenes.valueHasMutated();
@@ -1997,6 +2006,12 @@ define(function(require, exports, module) {
 			_model.scoreScene(scene);
 			
 		}
+		
+		_canvas.setWidth(_model.width());
+		_canvas.setHeight(_model.height());
+		_model.checkScene('');
+		_model.currentScene('');
+		
 	};
     
     var _editComponent = function(component){

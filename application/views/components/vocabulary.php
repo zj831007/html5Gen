@@ -119,11 +119,11 @@
             <tr>
                 <td></td>
                 <td>&nbsp;</td>
-                <td class="title">游戏模式</td>
-                <td><input type="checkbox" data-bind="enable: gameMode.practice, checked: gameMode.challenge" />挑战模式<br/>
-                    <input type="checkbox" data-bind="checked: gameMode.practice" />练习模式&nbsp;
-                    <label><input type="radio" value="free" data-bind="enable: gameMode.practice, checked: gameMode.practiceMode"/>自由选关&nbsp;
-                           <input type="radio" value="order" data-bind="enable: gameMode.practice, checked: gameMode.practiceMode"/>顺序选关
+                <td class="title"><?php echo lang('label.game.mode'); ?></td>
+                <td><input type="checkbox" data-bind="enable: gameMode.practice, checked: gameMode.challenge" /><?php echo lang('label.game.mode.challenge'); ?><br/>
+                    <input type="checkbox" data-bind="checked: gameMode.practice" /><?php echo lang('label.game.mode.practice'); ?>&nbsp;
+                    <label><input type="radio" value="free" data-bind="enable: gameMode.practice, checked: gameMode.practiceMode"/><?php echo lang('label.game.level.free'); ?>&nbsp;
+                           <input type="radio" value="order" data-bind="enable: gameMode.practice, checked: gameMode.practiceMode"/><?php echo lang('label.game.level.sort'); ?>
                     </label>
                 </td>
             </tr>
@@ -295,15 +295,16 @@
                     &nbsp;<input type="text" readonly="readonly" data-bind="value: menuScene().bgPic, attr:{'title': menuScene().bgPic}"  
 	                       placeholder="<?php echo lang('label.common.choose.image'); ?>" class="upload mocool_img_upload"/>              
 	                <button class="mocool_file_cancel"><?php echo lang('label.common.cancel'); ?></button>&nbsp;&nbsp;
-	                <input type="radio" value="m" data-bind="enable: gameMode.challenge, checked: menuScene().radioMenu" />模式菜单&nbsp;&nbsp;
-                    <input type="radio" value="l" data-bind="checked: menuScene().radioMenu" />选关菜单
+	                <input type="radio" value="m" data-bind="enable: gameMode.challenge, checked: menuScene().radioMenu" />
+	                <?php echo lang('label.game.menu.mode'); ?>&nbsp;&nbsp;
+                    <input type="radio" value="l" data-bind="checked: menuScene().radioMenu" /><?php echo lang('label.game.menu.level'); ?>
                 </td>
             </tr>
             <tr style="border-bottom:1px solid #ccc;" data-bind="visible: gameMode.challenge">
-                <td colspan="4" align="center">模式菜单</td>
+                <td colspan="4" align="center"><?php echo lang('label.game.menu.mode'); ?></td>
             </tr>
             <tr data-bind="visible: gameMode.challenge">
-                <td align="right" style="padding-right:10px;">菜单<?php echo lang('label.common.background'); ?></td>
+                <td align="right" style="padding-right:10px;"><?php echo lang('label.game.menu.bg'); ?></td>
                 <td valign="top">
                     <input type="text" readonly="readonly" 
                            data-bind="value: menuScene().menu.modeMenu.menuPic().pic1, attr:{'title': menuScene().menu.modeMenu.menuPic().pic1}"  
@@ -314,7 +315,7 @@
 	                &nbsp;Y&nbsp;<input type="number" name="y"  step="1"
 	                                min="0" data-bind="value: menuScene().menu.modeMenu.menuPic().y"/></td>
                 
-                <td align="right" style="padding-right:10px;">触控返回区域</td>
+                <td align="right" style="padding-right:10px;"><?php echo lang('label.game.back.area'); ?></td>
 	            <td valign="top">
 	                <?php echo lang('label.common.width'); ?>&nbsp;<input type="number" step="1" 
 	                                min="0" data-bind="value: menuScene().menu.modeMenu.menuBack().width"/>
@@ -327,7 +328,7 @@
                 </td>
             </tr>
             <tr data-bind="visible: gameMode.challenge">
-                <td align="right" style="padding-right:10px;">挑战模式按钮</td>  
+                <td align="right" style="padding-right:10px;"><?php echo lang('label.game.button.challenge'); ?></td>  
                 <td valign="top">
                     <div style="display:inline;"><input type="text" readonly="readonly" 
                            data-bind="value: menuScene().menu.modeMenu.callengeIcon().pic1, attr:{'title': menuScene().menu.modeMenu.callengeIcon().pic1}"  
@@ -342,7 +343,7 @@
 	                       placeholder="<?php echo lang('label.common.choose.image'); ?>" class="upload mocool_img_upload"/>              
 	                <button class="mocool_file_cancel"><?php echo lang('label.common.cancel'); ?></button></div>
 	            </td>
-	            <td align="right" style="padding-right:10px;">选关模式按扭</td>  
+	            <td align="right" style="padding-right:10px;"><?php echo lang('label.game.button.practice'); ?></td>  
                 <td valign="top">
                     <div style="display:inline;"><input type="text" readonly="readonly" 
                            data-bind="value: menuScene().menu.modeMenu.practiceIcon().pic1, attr:{'title': menuScene().menu.modeMenu.practiceIcon().pic1}"  
@@ -359,10 +360,10 @@
 	           </td>
             </tr>
             <tr style="border-bottom:1px solid #ccc;">
-                <td colspan="4" align="center">选关菜单</td>
+                <td colspan="4" align="center"><?php echo lang('label.game.menu.level'); ?></td>
             </tr>
             <tr> 
-                <td align="right" style="padding-right:10px;">菜单<?php echo lang('label.common.background'); ?></td>
+                <td align="right" style="padding-right:10px;"><?php echo lang('label.game.menu.bg'); ?></td>
                 <td valign="top">
                     <input type="text" readonly="readonly" 
                            data-bind="value: menuScene().menu.levelMenu.menuPic().pic1, attr:{'title': menuScene().menu.levelMenu.menuPic().pic1}"  
@@ -373,7 +374,7 @@
 	                &nbsp;Y&nbsp;<input type="number" name="y"  step="1"
 	                                min="0" data-bind="value: menuScene().menu.levelMenu.menuPic().y"/>
 	            </td>
-	            <td align="right" style="padding-right:10px;">触控返回区域</td>
+	            <td align="right" style="padding-right:10px;"><?php echo lang('label.game.back.area'); ?></td>
                 <td valign="top"><?php echo lang('label.common.width'); ?>&nbsp;<input type="number" step="1" 
 	                                min="0" data-bind="value: menuScene().menu.levelMenu.menuBack().width"/>
 	                <?php echo lang('label.common.height'); ?>&nbsp;<input type="number" step="1"
@@ -385,17 +386,18 @@
 	               </td>
             </tr>
             <tr>
-               <td align="right" style="padding-right:10px;">关卡按钮</td>
+               <td align="right" style="padding-right:10px;"><?php echo lang('label.game.button.level'); ?></td>
                <td colspan="3" data-bind="foreach: menuScene().menu.levelMenu.levelItems">
-                    <div style="display:inline">默认图片<input type="text" readonly="readonly" data-bind="value: pic1, attr:{'title':pic1}"  
+                    <div style="display:inline"><?php echo lang('label.game.button.pic1'); ?><input type="text" readonly="readonly" data-bind="value: pic1, attr:{'title':pic1}"  
 	                       placeholder="<?php echo lang('label.common.choose.image'); ?>" class="upload mocool_img_upload"/>              
 	                <button class="mocool_file_cancel"><?php echo lang('label.common.cancel'); ?></button></div>&nbsp;
-	                <div style="display:inline">过关图片<input type="text" readonly="readonly" data-bind="value: pic2, attr:{'title':pic2}"  
+	                <div style="display:inline"><?php echo lang('label.game.button.pic2'); ?><input type="text" readonly="readonly" data-bind="value: pic2, attr:{'title':pic2}"  
 	                       placeholder="<?php echo lang('label.common.choose.image'); ?>" class="upload mocool_img_upload"/>              
 	                <button class="mocool_file_cancel"><?php echo lang('label.common.cancel'); ?></button></div>
 	                     &nbsp;X&nbsp;<input type="number" name="x" step="1" min="0" data-bind="value: x"/>
 	                     &nbsp;Y&nbsp;<input type="number" name="y"  step="1"min="0" data-bind="value: y"/>
-	                &nbsp;点击进入&nbsp;<select data-bind="value: action, options: $root.levelScenes, optionsText: 'name',optionsValue:'id'"></select>
+	                     &nbsp;<?php echo lang('label.game.button.enter'); ?>&nbsp;
+	                     <select data-bind="value: action, options: $root.levelScenes, optionsText: 'name',optionsValue:'id'"></select>
 	                <div></div>
                 </td>
             </tr>
