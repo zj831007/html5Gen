@@ -14,7 +14,7 @@
 	<UL>										
         <LI><A href="#voTab-1"><?php echo lang('label.tab.misc.setting'); ?></A></LI>
         <LI><A href="#voTab-2"><?php echo lang('label.tab.scene.setting'); ?></A></LI>
-        <LI><A href="#voTab-3"><?php echo lang('label.tab.scene.preview'); ?></A></LI>
+        <!-- LI><A href="#voTab-3"><?php echo lang('label.tab.scene.preview'); ?></A></LI> -->
     </UL>
     <div id="voTab-1">
         <table>
@@ -666,9 +666,8 @@
         </table>
     </div>
     
-    <div id="voTab-3">
-		
-    </div>
+    <!-- div id="voTab-3">
+    </div> -->
 </div>
 </div>
 </div>
